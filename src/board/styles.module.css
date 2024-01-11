@@ -1,0 +1,9 @@
+.Board {
+    width: 384px;
+    height: 384px;
+    display: grid;
+    grid-template-columns: 32px 320px 32px;
+    grid-template-rows: 32px 320px 32px;
+    background-color: brown;
+    box-shadow: 0 0 5px 5px black;
+}

@@ -1,0 +1,10 @@
+.Field {
+    width: 320px;
+    height: 320px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: black;
+}

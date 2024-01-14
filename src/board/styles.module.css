@@ -1,9 +1,11 @@
 .Board {
-    width: 384px;
-    height: 384px;
+    width: calc(var(--cell-size) * 8);
+    height: calc(var(--cell-size) * 8);
     display: grid;
-    grid-template-columns: 32px 320px 32px;
-    grid-template-rows: 32px 320px 32px;
-    background-color: brown;
-    box-shadow: 0 0 5px 5px black;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: black;
+    box-shadow: 0 0 2px 1px whitesmoke;
 }

@@ -1,4 +1,4 @@
-import { Board } from '../board';
+import { Board } from '../Board/Board';
 import styles from './styles.module.css';
 
 export function App() {

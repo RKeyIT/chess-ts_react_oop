@@ -13,14 +13,14 @@ export class BoardModel {
   private initializeCells(): CellModel[] {
     const cellsArray = [];
 
-    let xIndex: number = 0;
+    let xIndex: number = 7;
     let yIndex: number = 0;
 
     for (let i = 1; i <= 64; i++) {
       cellsArray.push(new CellModel(xArrString[xIndex], yArrString[yIndex]));
 
       if (i % 8 === 0) {
-        xIndex++;
+        xIndex--;
         yIndex = 0;
       } else {
         yIndex++;

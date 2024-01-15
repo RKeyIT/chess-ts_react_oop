@@ -13,9 +13,9 @@ export class CellModel {
 
   private defineColor(x: xString, y: yString): CellColor {
     if (Number(y) % 2) {
-      return ['A', 'C', 'E', 'G'].some((el) => el === x) ? 'white' : 'black';
+      return ['A', 'C', 'E', 'G'].some((el) => el === x) ? 'black' : 'white';
     } else {
-      return ['B', 'D', 'F', 'H'].some((el) => el === x) ? 'white' : 'black';
+      return ['B', 'D', 'F', 'H'].some((el) => el === x) ? 'black' : 'white';
     }
   }
 }

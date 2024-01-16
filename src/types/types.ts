@@ -5,5 +5,4 @@ export const yArrString: yString[] = ['1', '2', '3', '4', '5', '6', '7', '8'];
 
 export type Coordinates = `${xString}${yString}`;
 
-export type CellColor = 'white' | 'black';
-export type PieceColor = 'white' | 'black';
+export type Color = 'white' | 'black';

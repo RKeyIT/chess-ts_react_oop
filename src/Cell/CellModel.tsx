@@ -1,11 +1,11 @@
 import { PieceAbstract } from '../Piece/PieceAbstract';
-import { xString, yString, CellColor, Coordinates } from '../types/types';
+import { xString, yString, Color, Coordinates } from '../types/types';
 
 export class CellModel {
   private _x: xString;
   private _y: yString;
   private _coordinates: Coordinates;
-  private _color: CellColor;
+  private _color: Color;
   private _piece: null | PieceAbstract;
 
   constructor(x: xString, y: yString) {
@@ -40,7 +40,7 @@ export class CellModel {
     return this._color;
   }
 
-  private defineColor(x: xString, y: yString): CellColor {
+  private defineColor(x: xString, y: yString): Color {
     if (Number(y) % 2) {
       return ['A', 'C', 'E', 'G'].some((el) => el === x) ? 'black' : 'white';
     } else {

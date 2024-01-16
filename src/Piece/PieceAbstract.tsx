@@ -1,7 +1,11 @@
+import { ReactNode } from 'react';
+import { Color } from '../types/types';
+
 export abstract class PieceAbstract {
-  constructor(team: string) {
+  constructor(team: Color) {
     this.team = team;
   }
 
-  team: string;
+  readonly team: Color;
+  abstract readonly component: ReactNode;
 }

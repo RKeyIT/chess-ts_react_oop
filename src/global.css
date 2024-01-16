@@ -6,6 +6,18 @@
     user-select: none;
 }
 
+.Piece.white {
+    color: whitesmoke;
+    stroke: black;
+    stroke-width: 1px;
+}
+
+.Piece.black {
+    color: black;
+    stroke: white;
+    stroke-width: 1px;
+}
+
 .Piece:active {
     color: red;
     width: 110%;

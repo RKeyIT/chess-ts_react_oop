@@ -1,4 +1,3 @@
-import { Pawn } from '../Piece/pawn/Pawn';
 import { Coordinates } from '../types/types';
 import { CellModel } from './CellModel';
 import styles from './styles.module.css';
@@ -16,7 +15,7 @@ export function Cell({ model }: ICellProps) {
     <div className={`${styles.Cell} ${styles[color]}`}>
       <div className={styles.coordinates}>{coordinates}</div>
       <div className={styles.highlighter}></div>
-      {piece && <Pawn></Pawn>}
+      {piece && piece.component}
     </div>
   );
 }

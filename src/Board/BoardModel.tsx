@@ -1,13 +1,16 @@
 import { CellModel } from '../Cell/CellModel';
+import { PawnModel } from '../Piece/pawn/PawnModel';
 import { xArrString, yArrString } from '../types/types';
 
 export class BoardModel {
-  private cellsArray: CellModel[] = this.initializeCells();
+  private _cells: CellModel[] = this.initializeCells();
 
-  constructor() {}
+  constructor() {
+    this.initializePieces();
+  }
 
   get cells() {
-    return this.cellsArray;
+    return this._cells;
   }
 
   private initializeCells(): CellModel[] {
@@ -28,5 +31,13 @@ export class BoardModel {
     }
 
     return cellsArray;
+  }
+
+  private initializePieces() {
+    this.cells.forEach((el) => {
+      if (el.x === 'A' || el.x === 'B' || el.x === 'G' || el.x === 'H') {
+        el.piece = new PawnModel('white');
+      }
+    });
   }
 }

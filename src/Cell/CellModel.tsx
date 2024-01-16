@@ -1,14 +1,43 @@
-import { xString, yString, CellColor } from '../types/types';
+import { PieceAbstract } from '../Piece/PieceAbstract';
+import { xString, yString, CellColor, Coordinates } from '../types/types';
 
 export class CellModel {
-  x: xString;
-  y: yString;
-  color: CellColor;
+  private _x: xString;
+  private _y: yString;
+  private _coordinates: Coordinates;
+  private _color: CellColor;
+  private _piece: null | PieceAbstract;
 
   constructor(x: xString, y: yString) {
-    this.x = x;
-    this.y = y;
-    this.color = this.defineColor(x, y);
+    this._x = x;
+    this._y = y;
+    this._coordinates = `${x}${y}`;
+    this._color = this.defineColor(x, y);
+    this._piece = null;
+  }
+
+  get x() {
+    return this._x;
+  }
+
+  get y() {
+    return this._y;
+  }
+
+  get coordinates() {
+    return this._coordinates;
+  }
+
+  get piece() {
+    return this._piece;
+  }
+
+  set piece(piece: PieceAbstract | null) {
+    this._piece = piece;
+  }
+
+  get color() {
+    return this._color;
   }
 
   private defineColor(x: xString, y: yString): CellColor {

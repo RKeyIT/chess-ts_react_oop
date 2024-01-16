@@ -6,14 +6,13 @@ export class CellModel {
   private _y: yString;
   private _coordinates: Coordinates;
   private _color: Color;
-  private _piece: null | PieceAbstract;
+  private _piece: null | PieceAbstract = null;
 
   constructor(x: xString, y: yString) {
     this._x = x;
     this._y = y;
     this._coordinates = `${x}${y}`;
     this._color = this.defineColor(x, y);
-    this._piece = null;
   }
 
   get x() {

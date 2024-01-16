@@ -19,7 +19,7 @@ export class BoardModel {
   }
 
   private initializeCells(): CellModel[] {
-    const cellsArray = [];
+    const cellsArray: CellModel[] = [];
 
     let yIndex: number = 7;
     let xIndex: number = 0;
